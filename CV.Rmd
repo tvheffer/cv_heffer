@@ -1,0 +1,413 @@
+---
+name: Taylor
+surname: Heffer
+position: "Assistant Professor"
+address: "Ontario Tech University, Oshawa"
+phone: +1 857 706 9988
+email: "theffer@fas.harvard.edu"
+github: tvheffer
+orcid: 0000-0001-5586-5640
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 414141
+docname: CV
+output: vitae::awesomecv
+editor_options: 
+  chunk_output_type: console
+  format: pdf
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+pkgs <- c('vitae' ,'here' ,'tinytex' ,'tibble' ,'glue' ,'rmarkdown' ,'dplyr', 'readr' ,'yaml')
+xfun::pkg_attach2(pkgs)
+
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data sctructure for tribbles
+             ,'magrittr'  # The Pipe %>%
+             ,'here'      # Relative Filepaths
+             ,'readr'     # Data Loading
+             ,'tidyverse' # Needed for bind_rows and whatever
+             ,'scholar'   # Updating publications from google scholar
+             ,'kableExtra'# Adding technicalskills table
+            )
+library(magrittr)
+# Install packages not yet installed
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}
+
+# Packages loading
+lapply(packages, library, character.only = TRUE) %>%
+  invisible()
+
+source(file = here("r","data.r"))
+
+```
+
+
+# Academic Appointments
+
+```{r APPOITNEMT}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Ontario Tech University", "2024-present", "Assistant Professor", "Oshawa, ON") %>%
+  detailed_entries(Degree, Year, Institution, Where)
+
+```
+
+# Education and Training
+
+```{r EDUCATION}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Harvard University", "2022-23", "Postdoctoral (NSERC) Fellow", "Cambridge, MA",
+  "Brock University", "2017-22", "PhD, Lifespan Development Psychology", "St. Catharines, ON",
+  "Brock University", "2015-17", "MA, Lifespan Development Psychology", "St. Catharines, ON",
+  "Brock University", "2011-15", "BA, Honors Psychology and Child and Youth ", "St. Catharines, ON") %>%
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Honors and Awards
+**Academic and Research**
+
+```{r AWARDS}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+  "Harvard University", "2022", "Natural Sciences and Engineering Research Postdoctoral Fellowship", "Cambridge, MA", "Application ranked 1st in psychology",
+  
+ "Development Conference", "2022", "Student Presentation Award (Second Place)", "Alberta, Canada", NA,
+ 
+ "Brock University", "2022", "Faculty of Social Science Research Assistantship ", NA, NA,
+ "Brock University", "2022", "Susan Sydor Graduate Scholarship", NA, NA,
+ "Brock University", "2021", "Ontario Graduate Scholarship", NA, NA,
+ "Brock University", "2019", "Ralph D. Morris Graduate Student Award ", NA, NA,
+ "Brock University", "2019", "Match of Minds", NA, NA,
+ "Brock University", "2018-20", "Dean of Graduate Studies Excellence Scholarship", NA, NA,
+ "Social Sciences and Humanities Research Council", "2017-20", "Joseph-Armand Bombardier Canada Graduate (PhD)", NA, NA,
+ 
+ "Brock University", "2017", "Jack M. Miller Excellence in Research Award", NA, NA,
+ "Brock University", "2017/20", "Distinguished Graduate Student Award MA and PhD", NA, NA,
+ "Canadian Psychological Association", "2017", "Certificate of Academic Excellence (MA Thesis)", NA, NA,
+ "Brock University", "2017", "Library Open Access Publishing Fund", NA, NA,	
+ "Brock University", "2016", "Ontario Graduate Scholarship", NA, NA,
+ "Social Sciences and Humanities Research Council", "2015", "Joseph-Armand Bombardier Canada Graduate Scholarship (MA)", NA, NA,
+ "Brock University", "2015", "Research Fellowship & Match", NA, NA,
+ "Brock University", "2015", "Entrance Scholarship", NA, NA,
+ "Brock University", "2015", "Ontario Graduate Scholarship (Declined)", NA, NA) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+```
+ 
+**Leadership and Community Engagement**
+```{r L-AWARDS}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+ "Brock University", "2020/21", "Scotiabank Graduate Award ", NA, NA,
+ "Brock University", "2020", "Barb Daly Excellence and Student Leadership", NA, NA,
+ "Brock University", "2020", "Dr. Liette Vasseur Graduate Scholarship", NA, NA,
+ "Brock University", "2020", "President Surgite Award", NA, NA,
+ "Brock University", "2020", "Wendy Murphy Memorial Fund (Peer nominated)", NA, NA) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+```
+
+# Publications
+
+Refereed Published Academic Papers (19): 
+
+1.	**Heffer, T**., Van Noordt S.J.R., & Willoughby, T. (2023). Developmental trajectories of sensitivity to threat in children and adolescents predict larger medial frontal theta differentiation during response inhibition. *Social Cognitive and Affective Neuroscience.* 
+
+2.	Shahid, H., **Heffer, T**., Borg, M. E., \*Buma-Wiens, A., & Willoughby, T. (2022). Differentiating profiles of vaping, alcohol, and cannabis use among early adolescents. *The Journal of Early Adolescence.*
+
+3.	Willoughby, T., **Heffer, T**., Borg, M. E. (2022). Deliberate Self-injury in Children and Associations with Negative Adjustment. *JAMA Pediatrics.*
+
+4.	Van Noordt S.J.R., **Heffer, T**., Willoughby, T. (2021). A developmental examination of medial frontal theta dynamics and inhibitory control. *NeuroImage.*
+
+5.	**Heffer, T.**, & Willoughby, T. (2021). Investigating the consistency of threat-related ERPs among children and adolescents. *Cognitive Affective Behavioral Neuroscience.*
+
+6.	Willoughby, T., **Heffer, T**., Van Noordt S.J.R., Desjardins, J., Segalowitz, S., Schmidt, L. (2021). An ERP investigation of children and adolescents’ sensitivity to wins and losses during a peer observation manipulation. *Developmental Cognitive Neuroscience.*
+
+7.	Willoughby, T., **Heffer, T**., Good, M., Magnacca, C. (2021). Is adolescence a time of heightened risk taking? An overview of types of risk-taking behaviors across age groups. *Developmental Review.* 
+
+8.	Willoughby, T., Dykstra, V.W., **Heffer, T.**, \*Braccio., J. Shahid, H., (2021). A long-term study of what best predicts graduating from university versus leaving prior to graduation. *Journal of College Student Retention: Research, Theory & Practice.* 
+
+9.	**Heffer, T**., \*Lundale, C., Wylie, B.E., Willoughby, T. (2021). Investigating sensitivity to threat with the Behavioral Inhibition Scale (BIS) among children, adolescents and adults: The role of negatively-phrased questions. *Personality and Individual Differences.*
+
+10.	**Heffer, T**., & Willoughby, T. (2021). A person-centered examination of emotion dysregulation, sensitivity to threat, and impulsivity among children and adolescents: An ERP study. *Developmental Cognitive Neuroscience.*
+
+11.	Willoughby, T., **Heffer, T**., Dykstra, V.W., Shahid, H., \*Braccio., J. (2020). A person-centred analysis of first-year university students: Associations with psychosocial adjustment across seven years and post-university outcomes. *Journal of Youth and Adolescence*. 49(12), 2459-2475.
+
+12.	**Heffer, T**., & Willoughby, T. (2020). A longitudinal study investigating trajectories of sensitivity to threat and their association with alpha asymmetry among children and adolescents. *Developmental Cognitive Neuroscience*. 46, 100863. https://doi.org/10.1016/j.dcn.2020.100863
+
+13.	**Heffer, T**., & Willoughby, T. (2020). Sensitivity to negative feedback among children and adolescents: An ERP study comparing developmental differences between high-worriers and low-worriers. *Cognitive, Affective, & Behavioral Neuroscience*, 20, 624-635. https://doi.org/10.3758/s13415-020-00791-8
+
+14.	**Heffer, T**., Wylie, B.E, & Willoughby, T. (2019). An investigation of adolescents’ reported and self-perceived risk-taking. *The Journal of Early Adolescence*, 40(6), 772–788.
+
+15.	**Heffer, T**., Good, M., Daly, O., MacDonell, E., Willoughby, T. (2019). The longitudinal association between social media use and depressive symptoms among adolescents and young adults: An empirical reply to Twenge et al. (2018). *Clinical Psychological Science*, 7(3), 462-470.
+    - This work is included as one of the most read articles in this journal in the last 6 months
+
+16.	**Heffer, T**., & Willoughby, T. (2018). The role of emotion dysregulation: A longitudinal investigation of the interpersonal theory of suicide. *Psychiatry Research*, 260, 379-383.
+
+17.	**Heffer, T**., & Willoughby, T. (2017). A count of coping strategies: A longitudinal study investigating an alternative method to understanding coping and adjustment. *PloS one*, 12(10).
+
+18.	Willoughby, T., **Heffer, T**., & Hamza C.A. (2015). The link between nonsuicidal self-injury and acquired capability for suicide: A longitudinal study. *Journal of Abnormal Psychology*, 1110-1115.
+
+19.	Hamza, C. A., Willoughby, T., & **Heffer, T**. (2015). Impulsivity and nonsuicidal self-injury: A review and meta-analysis. *Clinical Psychology Review*, 3813-24. doi:10.1016/j.cpr.2015.02.010.
+
+Non-refereed publications:
+
+1.	Gallant, C., & **Heffer, T**. (2016). A Collaborative Approach to Graduate Training at Brock University. *Canadian Psychological Association*, Mind Pad.
+
+
+# Presentations
+
+**Invited Talks**
+
+```{r TALKS}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+ "Ontario Tech University", "April 2023", "Psychology Department Research Talk", NA, NA,
+ "Harvard University", "Feb 2021", "Affective Neuroscience and Development Lab", NA, NA,
+ "University of Oregon", "Nov 2020", "Developing Brains in Context Lab", NA, NA,
+ "Brock University", "2018/19/22", "Youth Engagement Committee", NA, "Invited to discuss research and facilitate youth involvement in research",
+ "Psychology Society, Brock University", "March, 2018", "Panelist: Career Night", NA, NA,
+ " Psychology Department, Brock University", "Nov, 2017", "Panelist: Graduate School Information Session", NA, NA,
+ ) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+```
+
+
+**Symposiums**
+
+1.	Symposium Chair & Speaker. Factors that affect social behavior among children, adolescents, and emerging adults with anxiety-related temperament styles. Development 2022. (Alberta, Canada)
+    - Awarded 2nd best student talk
+
+**Conference Presentations**
+
+1.	**Heffer, T**., Omary, A., Flournoy, J.C., Baum, G.L., Barch D.M., HCP-D Consortium, Somerville, L.H. (2023, March). The impact of reward and punishment history on response inhibition from childhood to early adulthood. Research accepted to the Society for Affective Science conference.
+
+2.	Omary, A., **Heffer, T**., Flournoy, J. C., Baum, G. L., Curtis, M., Colich, N. L., Mair, P., Barch, D. M., HCP-D Consortium, & Somerville, L. H. (2023, April). Testing the mediating role of pubertal hormones on age-related changes and sex differences in adolescent behavioral inhibition and Activation [Poster presentation]. Social & Affective Neuroscience Society 2023 Conference.
+
+3.	**Heffer, T**., van Noordt, S.J.R., Willoughby, T. (2021). The role of medial frontal theta among children and adolescents with consistently high threat sensitivity. Research presented at the Virtual FLUX Congress
+
+4.	**Heffer, T**., Willoughby, T. (2021, April). Investigating the consistency of threat-related ERP’s among children and adolescents. Research presented to the Virtual Society for Research on Child Development Conference.
+
+5.	**Heffer, T**., Willoughby, T. (2020, September). A person-centered examination of regulation, sensitivity to threat, and impulsivity among children and adolescents: An ERP study. Research accepted to the Virtual FLUX Congress.
+
+6.	**Heffer, T**., Willoughby, T. (2020, canceled). Investigating Children and Adolescent Worriers’ Neural Sensitivity to Negative Feedback: Comparing Pubertal Status and Grade Level. Research accepted to Society for Research on Adolescence Conference, San Diego, CA.
+
+7.	**Heffer, T**., Willoughby, T. (2019, September). Right Alpha Activation Moderates the Stability of Punishment Sensitivity Over Time. Research presented at Society for Psychophysiological Research Conference, Washington, DC.
+
+8.	Willoughby, T., **Heffer, T**., van Noordt, S., Desjardins, J., Segalowitz, S., Schmidt, L. (2019, August). An ERP investigation of children and adolescents’ sensitivity to wins and losses during a perceived peer observation manipulation. Research presented at the FLUX Congress, New York, New York.
+
+9.	**Heffer, T**., Willoughby, T. (2019, August). Investigating ERP Consistency across Child and Adolescent Worriers in Tasks Measuring Sensitivity to Punishment. Research presented at the FLUX Congress, New York, New York.
+
+10.	**Heffer, T**., Willoughby, T. (2019, March). An ERP Study Investigating Sensitivity to Punishment among High and Low Worriers. Research presented at the Society for Research on Child Development Conference, Baltimore, Maryland.
+
+11.	Wylie, B., **Heffer, T**., Willoughby, T. (2019, March). Adolescent Risk-Taking: A Comparison of Self-Reported Behaviors and Self-Perceptions. Research presented at the Society for Research on Child Development Conference, Baltimore, Maryland.
+
+12.	Ilieff, M., Hamza, C. A., Willoughby, T. & **Heffer, T**. (2019, March). Maladaptive and adaptive perfectionism and nonsuicidal self-injury. Poster presented at the International Society for the Study of Self-Injury.
+
+13.	**Heffer, T**., Willoughby, T. (2018, May). Investigating the Role of Worry in Children and Adolescents: An EEG Study. Symposium presented at Development 2018 Conference, Brock University.
+
+14.	**Heffer, T**., Willoughby, T. (2018, May). Worry, Sleep Problems and Alcohol Use: A Longitudinal Study. Research presented at Development 2018 Conference, Brock University.
+
+15.	Willoughby, T., Desjardins, J., Segalowitz, S., Schmidt, L., **Heffer, T**., Semplonius, T. (2018, May). An ERP Investigation of Children and Adolescents' Sensitivity to Wins and Losses during a Perceived Peer Observation Manipulation. Symposium presented at Development 2018 Conference, Brock University.
+
+16.	**Heffer, T**., Willoughby, T. (2018, April). A Longitudinal Study of Emotion Regulation and Problem Behaviours. Research presented at Society for Research on Adolescence Conference, Minneapolis, Minnesota
+
+17.	**Heffer, T**., Willoughby, T. (2017, May). The Role of Emotion Dysregulation: A Longitudinal Investigation of the Interpersonal Theory of Suicide. Research presented at Association for Psychological Science Conference, Boston, Massachusetts.
+
+18.	**Heffer, T**., Willoughby, T. (2017, April). A Count of Coping Strategies: A Longitudinal Study Investigating Repertoire Richness and Adjustment. Research presented at Society for Research in Child Development Conference, Austin, Texas.
+
+19.	**Heffer, T**., Willoughby, T. (2017, April). The Association between NSSI and Suicide Ideation: The role of Maladaptive Perfectionism. Research presented at Society for Research in Child Development Conference, Austin, Texas.
+
+20.	**Heffer, T**., Willoughby, T., & Hamza C.A. (2016, March). The link between nonsuicidal self-injury and acquired capability for suicide: A longitudinal study. Research presented at the Society for Research on Adolescence Conference, Baltimore, Maryland. 
+
+21.	**Heffer, T**., Willoughby, T., (2015, April). Investigating Joiner's Theory of Suicide: Identifying Predictors of Suicide Ideation in a Sample of University Students. Annual Ontario Psychology Undergraduate Thesis Conference, London, Ontario, Canada
+
+# Teaching 
+
+**Instructor Positions**
+```{r Teaching}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+ "Brock University (Undergraduate 4th year course)", "Jan 2022", "Instructor: Data Science for Academic and Applied Research", NA, NA) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+```
+
+```{r workshops}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+ "Brock University (4 workshops held)", "August 2022/23", "[R] is for research: A beginner’s guide to using R", NA, NA,
+ ) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+```
+
+**Invited Guest Lectures**
+```{r lectures}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+ "Wesleyan University(Undergraduate 3rd year course)", "April 2023", "Adolescence and Emerging Adulthood", NA, NA,
+ "Brock University(Undergraduate 4th year course)", "Nov 2020", "Data Science for Academic and Applied Research", NA, NA,
+ "Brock University(Undergraduate 3rd year course)", "March 2019", "Adolescent Development ", NA, NA,
+ ) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+```
+
+
+**Other Teaching Activities**
+```{r APPRENTICESHIP}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+ "Apprenticeship at Brock University (Undergraduate 4th year)", "Jan 2020/21", "Data Science for Academic and Applied Research", NA, NA,
+ ) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+```
+
+
+
+```{r}
+
+brock <- c("PSYC 4P08: Data Science for Academic and Applied Research (2020/21)",
+           "PSYC 2P12: Lifespan Development (2015/18/19)",
+           "PSYC 4P07: Transition to workplace (2018)",
+           "PSYC 3P39: Statistics (2016/17)",
+           "PSYC 3P18: Adolescent Development (2016)",
+           "PSYC 3P77: Social Development (2015)")
+
+classes <- tibble(title =c(rep("Brock University", length(brock))), detail = brock, apprentice = "Teaching Assistantships")
+
+classes %>%
+  detailed_entries(
+    what = title,
+    why = detail, 
+    with= apprentice[1]
+  )
+```
+
+```{r other-teach}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+ "ANDL, Harvard University", "2022", "Project Teach", NA, "Co-created and taught a seminar for 7th grade students on developmental cognitive neuroscience topics",
+ 
+  "Namibia, Africa", "2013", "Resiliency Class: Brock University", NA, "Created and taught lessons in Math/English to grades 8-12 for three weeks",
+ ) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+```
+
+# Mentoring
+**Undergraduate Students**
+\vspace{-5truemm}
+```{r}
+harvard <- c("Jadyn Matthews (Honors thesis)","Nicole Uribe (Research Assistant)")
+brock <- c("Cody Ellis (Honors thesis)", "Annelise Wiens (Honors thesis & Independent study)",
+           "Joelle Braccio (Independent study)", "Carly Lundale (Honors thesis & Independent study)")
+
+classes <- tibble(title =c((rep("Harvard University", length(harvard))),rep("Brock University", length(brock))), detail = c(harvard,brock))
+
+classes %>%
+  detailed_entries(
+    what = title,
+    why = detail, 
+
+  ) 
+classes[c(1:4),3] <- ""
+    
+```
+
+**Honors & Distinctions Awarded to Mentees** 
+
+```{r mentee-award}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+ "Annelise Wiens, Brock University", "2021", "Faculty of Social Science Student Research Award", NA, NA,
+ "Carly Lundale, Canadian Psychological Association", "2020", "Honors thesis: Certificate of Excellence", NA, NA) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+```
+
+# Knowledge Mobilization
+
+```{r km}
+leadership <- tribble(
+    ~title, ~unit, ~year,  ~detail,
+    "Community Research Talk", "Pathstone Mental Health", "2019", "presented research to over 100 staff at Pathstone Mental Health",
+    "Infographics", "Brock Healthy Youth Project Partners (e.g., WHO; UNICEF, Mental Health Commission of Canada; Niagara region school board)", "2019", NA,
+    "Media Interviews", "Heffer et al., 2019; Clin.Psyc.Sci.", "2019", 
+    "The results from one of my first-author publications was distributed widely and received extensive media attention, as follows:
+    \\begin{itemize}
+        \\item Association for Psychological Science. (2019, February 27). Longitudinal Data Show No Evidence of Teens’ Social Media Use Leading to Depression. Retrieved from https://www.psychologicalscience.org/observer/longitudinal-data-show-no-evidence-of-teens-social-media-use-leading-to-depression (also featured in Science Daily)
+        \\item Psychology Today. (2019, February 22). Is Tech Really Hurting Teens?[Press release]. 
+        Retrieved from: https://www.psychologytoday.com/ us/blog/brainstorm/201902/is-tech-really-hurting-teens.
+        \\item Brock News. (2019, February 14). Brock researchers find no evidence social media use predicts future depression. [Press release]. Retrieved from: https://brocku.ca/brock-news/2019/02/brock-researchers-find-no-evidence-social-media-use-predicts-future-depression
+     \\item Also distributed in Curaçao Chronicle, Psych Central, Medical News Today, Drugs.com, Consumer Affairs; Daily Mail, The Times, etc.
+    \\end{itemize}")
+
+leadership %>%
+    detailed_entries(
+        with = title,
+        what = unit,
+        why = detail,
+        when = year, .protect = F)
+
+```
+
+# Research and Teaching Development
+```{r training}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+ "Center for Brain Science, Harvard", "2022", "Introduction to fMRI", NA, NA,
+ "Harvard University", "2022", "Bystander intervention training", NA, NA,
+ "Brock University", "2021", "Using R for Reproducible Research Course", NA, NA,
+ "Virtual", "2021", "Global R Studio Conference", NA, NA,
+ "Harvard’s Women in Psyc", "2021", "Advanced R workshop: A Tidyverse Language Perspective ", NA, NA,
+ "Informal R Users Group at Brock University", "2019/20", "ARGH Coding Club", NA, NA,
+ "Brock University", "2019", "Datathon R Workshop", NA, NA,
+ "Brock University", "2017-19", "EEG Workshop", NA, "One-week workshop focusing on EEG analysis",
+ "Mindware Technologies, Ohio", "2018", "Impedance Workshop", NA, "Two-day workshop on data collection and data cleaning",
+ "Brock University", "2018", "Data Visualization and Programing Workshop", NA, "Two-day workshop using Python for data visualization",
+ "Brock University(grad-level course)", "2018", "Introduction to Computer Programming for Experimental Psychology", NA, "Introduction to MATLAB programming language",
+ "Centre for Pedagogical Innovation, Brock University", "2017", "TA Advanced Certificate in Teaching and Learning in Higher Education", NA, NA,
+ "Centre for Pedagogical Innovation, Brock University", "2016", "TA Certificate in Teaching and Learning in Higher Education", NA, NA,
+  "Brock University(grad-level course)", "2016", "Longitudinal Data Analysis", NA, NA,
+  "Brock University", "2015", "3-day R Workshop", NA, NA,
+ ) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+``` 
+
+# Service
+
+```{r leader }
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+  "Harvard University", "2022-23", "Mentorship meetups (Committee Member)", NA, NA,
+  "Brock University", "2016-21", "Undergraduate Workshops", NA, "Created and facilitated annual workshops (e.g., Thinking about Grad school?; Getting Involved in Research; External Scholarship Applications)",
+ "Brock University", "2017-22", "Psychology Social Committee (Committee Member)", NA, NA,
+ "Brock University", "2020", "Brock University Featured Graduate Student", NA, NA,
+ "Brock University", "2018", "Development 2018 Psychology Conference (Volunteer)", NA, NA,
+ "Brock University", "2017-18", "Psychology Department Recruitment Group (Committee Member)", NA, NA,
+ "Canadian Psychological Association", "2016-19", "Psychology Social Committee (Graduate Student Representative)", NA, NA,
+ "Brock University", "2016-17", "Psychology Graduate Committee (Graduate Student Representative)", NA, NA,
+ "Brock University", "2016-19", "Recruitment Events (Graduate Student Volunteer)", NA, NA,
+ "Brock University", "2015-16", "Psychology Department Committee (Graduate Student Representative)", NA, NA,
+ ) %>%
+  detailed_entries(Degree, Year, Institution, Where, Why)
+``` 
+
+
+
