@@ -1,9 +1,9 @@
-[![](./img/cvPreview.png)](https://github.com/akirosingh/CV/blob/master/CV.pdf)
+[![](./img/cvPreview.png)](https://github.com/tvheffer/cv_heffer/CV.pdf)
 
 
 This CV is created using the **`R`** Package [`vitae`](https://github.com/mitchelloharawild/vitae)
+and from a template from: https://github.com/akirosingh/CV/blob/master/CV.pdf
 
-Thanks to Mitchell for making it possible to build an elegant CV in rmarkdown and Bryan Jenks for making it accessible to others.
 
 
 Had to install xlatex:
