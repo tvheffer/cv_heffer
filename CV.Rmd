@@ -183,7 +183,6 @@ tribble(
   detailed_entries(Degree, Year, Institution, Where, Why)
 ```
 
-
 **Symposiums**
 
 1.	Symposium Chair & Speaker. Factors that affect social behavior among children, adolescents, and emerging adults with anxiety-related temperament styles. Development 2022. (Alberta, Canada)
@@ -240,16 +239,8 @@ tribble(
 library(tibble)
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
- "Brock University (Undergraduate 4th year course)", "Jan 2022", "Instructor: Data Science for Academic and Applied Research", NA, NA) %>%
-  detailed_entries(Degree, Year, Institution, Where, Why)
-```
-
-```{r workshops}
-library(tibble)
-tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
- "Brock University (4 workshops held)", "August 2022/23", "[R] is for research: A beginner’s guide to using R", NA, NA,
- ) %>%
+ "Brock University (Undergraduate 4th year course)", "Jan 2022", "Data Science for Academic and Applied Research", NA, NA,
+"Brock University (4 workshops held)", "August 2022/23", "[R] is for research: A beginner’s guide to using R", NA, NA,) %>%
   detailed_entries(Degree, Year, Institution, Where, Why)
 ```
 
@@ -258,9 +249,9 @@ tribble(
 library(tibble)
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
- "Wesleyan University(Undergraduate 3rd year course)", "April 2023", "Adolescence and Emerging Adulthood", NA, NA,
- "Brock University(Undergraduate 4th year course)", "Nov 2020", "Data Science for Academic and Applied Research", NA, NA,
- "Brock University(Undergraduate 3rd year course)", "March 2019", "Adolescent Development ", NA, NA,
+ "Wesleyan University (Undergraduate 3rd year course)", "April 2023", "Adolescence and Emerging Adulthood", NA, NA,
+ "Brock University (Undergraduate 4th year course)", "Nov 2020", "Data Science for Academic and Applied Research", NA, NA,
+ "Brock University (Undergraduate 3rd year course)", "March 2019", "Adolescent Development ", NA, NA,
  ) %>%
   detailed_entries(Degree, Year, Institution, Where, Why)
 ```
