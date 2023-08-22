@@ -113,7 +113,7 @@ tribble(
  "Brock University", "2020", "Barb Daly Excellence and Student Leadership", NA, NA,
  "Brock University", "2020", "Dr. Liette Vasseur Graduate Scholarship", NA, NA,
  "Brock University", "2020", "President Surgite Award", NA, NA,
- "Brock University", "2020", "Wendy Murphy Memorial Fund (Peer nominated)", NA, NA) %>%
+ "Brock University", "2020", "Wendy Murphy Memorial Fund (Peer Nominated)", NA, NA) %>%
   detailed_entries(Degree, Year, Institution, Where, Why)
 ```
 
